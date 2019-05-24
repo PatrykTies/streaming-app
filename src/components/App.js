@@ -4,6 +4,7 @@ import StreamList from './streams/StreamList';
 import StreamEdit from './streams/StreamEdit';
 import StreamDelete from './streams/StreamDelete';
 import StreamShow from './streams/StreamShow';
+import StreamCreate from './streams/StreamCreate';
 import Header from './Header';
 import './styles.css';
 export default class App extends Component {
@@ -13,8 +14,8 @@ export default class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <Route path='/' exact component={StreamList} />
             <Route path='/streams/new' exact component={StreamList} />
+            <Route path='/' exact component={StreamCreate} />
             <Route path='/streams/edit' exact component={StreamEdit} />
             <Route path='/streams/delete' exact component={StreamDelete} />
             <Route path='/streams/show' exact component={StreamShow} />
